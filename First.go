@@ -10,18 +10,36 @@ Usar sempre fmt, por ser algo padrão do Go, o Print pode cair em desuso com o t
 Funções parecidas com C.
 
 Palavras reservadas no GO podem causar erros na sintaxe
-*/
 
-func main() {
+init sempre vai iniciar ao rodar o script, independente qual função estiver primeiro na ordem do código
 
-	d, eae := 32, 21
-	fmt.Println(d, eae)
+Em um código clean seria assim:
+
+var diaSemana string
+
+func init () {
+
+----------------------
+codigo
+----------------------
 
 }
 
-//init sempre vai iniciar ao rodar o script, independente qual função estiver primeiro na ordem do código
+func main () {
 
-func init() {
-	eae, name := 90, "tudo certo"
-	fmt.Println(eae, name)
+-------------
+codigo
+-------------
+
+}
+
+*/
+
+func main() {
+	fmt.Println(Lambda())
+	return
+}
+
+func Lambda() string {
+	return "Qualquer coisa"
 }
